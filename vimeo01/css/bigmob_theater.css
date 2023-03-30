@@ -1,0 +1,384 @@
+/*Mobile Portrait*/  
+@media only screen and (min-width: 809px) and (max-width: 896px) and (-webkit-device-pixel-ratio : 3) and (orientation: portrait) {
+
+    html,
+    body {
+        font-size: 16px;
+        width: 100vw;
+        height: 100%;
+        overflow-y: auto;
+        padding: env(safe-area-inset, 0px);
+      }
+
+    body {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto !important;
+        background-image: linear-gradient(to right bottom, #0c1d3d, #0b1a40, #0d1742, #111343, #160e44, #1f093c, #240434, #27002d, #25001f, #1f0014, #150009, #000000);
+        background-size: 150% 150%;
+      }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display:flex;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        scrollbar-width: none; 
+      }
+
+      .cate {
+        position: fixed;
+        z-index: 996;
+        top: 6%;
+        left: 0;
+        width: 90%;
+        display: flex;        
+        justify-content: center;
+      }
+
+      .catepart{
+        width:50%;
+      }
+
+      .catepart2{
+        margin-left:0;
+      }
+
+      .cate li {
+        font-size: 0.7rem;
+      }
+
+    /*****Video section******/  
+
+      .videos {
+        /* position: relative; */
+        position:absolute;
+        top: 10%;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        height: 83%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inside {
+        margin-bottom:5%;
+        flex: 0 0 auto; /*This is crucial to apply, otherwise width of imgs in divs are not adjustable.*/
+      }
+
+      #a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #a10, 
+      #d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10{
+       /* width:initial;
+       top:initial; */
+       width: 83%;
+       top: 100%;
+       left:initial;
+      }
+
+      #c1, #c2, #c3, #c4{
+        width: 83%;
+        top: 11%;
+        left:initial;
+      }
+
+      #e1, #e2, #e3, #e4, #e5, #e6, #e7, #e8, #e9{
+        width: 83%;
+        top: 85%;
+        left:initial;
+      }
+
+      #f1, #f2, #f3, #f4, #f5, #f6, #f7, #f8, #f9, #f10, #f11{
+        width: 83%;
+        top: 115%;
+        left:initial;
+      }
+      
+      [data-scroll-dir-y='1'] .inside {
+        /* opacity: 0.4; */
+        opacity: calc(var(--visible-x) * var(--visible-x));
+        transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5)));
+      }
+      /*next아이들이 순차적으로 효과*/
+      
+      [data-scroll-dir-y='-1'] .inside {
+        opacity: calc(var(--visible-x) * var(--visible-x));
+        transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5)));
+      }
+      
+      [data-scroll-dir-y='1'] .special {
+        /* opacity: 0.4; */
+        opacity: calc(var(--visible-x) * var(--visible-x));
+        transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5))) translateY(140px);
+      }
+      
+
+
+    /*****Header****/  
+    .header {
+        position: fixed;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+      }
+
+    #mainlogo {
+        position: fixed;
+        left: 50%;
+        top: 6.25%;
+        transform: translate(-50%, -100%);
+        width: 14.5%;
+        z-index: 997;
+      }
+    
+    #mainlogo img {
+        width: 100%;
+    }
+    
+    /*****Menu******/
+    #sidebarMenu {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /*relate*/
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        background: rgb(0, 0, 0, 0.8);
+        z-index: 1000;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .sidebarMenuInner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .logosec {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        height: auto;
+        text-align: center;
+      }
+    
+      #biglogo {
+        width: 100%;
+      }
+    
+      /*UL*/
+      #list {
+        width: 72%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+        margin-left: 5%;
+      }
+    
+      #list li {
+        font-size: 1rem;
+        line-height: 0;
+      }
+    
+      #list li a:hover,
+      #list li a:focus {
+        color: #32ff32;
+      }
+    
+      #list li a {
+        text-decoration: none;
+        color: #f1f0f8;
+      }
+    
+      #contact_typo {
+        position: relative;
+        left: -4%;
+      }
+    
+      input[type='checkbox']:checked ~ #sidebarMenu {
+        transform: translateX(0);
+      }
+    
+      input[type='checkbox'] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+      }
+      .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1002;
+        top: 48%;
+        left: 3%;
+        width: 20px;
+      }
+      .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #32ff32;
+      }
+    
+      .spinner:hover,
+      .spiner:focus {
+        cursor: pointer;
+        color: #32ff32;
+      }
+    
+      .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 2px;
+      }
+      .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+      }
+      .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 2px;
+      }
+      input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+      }
+      input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+        z-index:1111;
+      }
+      input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -11px;
+      }
+
+      /*****Footer*****/
+      .footer {
+        position: absolute;
+        /* bottom: -4%; */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.2rem;
+        z-index: 998;
+        color: black;
+        background-color: #32ff32;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+    
+      .foo-content {
+        width: 350%;
+        height: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        line-height: 18px;
+        /* animation: marquee 13s linear infinite forwards; */
+      }
+  
+    
+      .footer::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        top: 15%;
+        width: 127%;
+        height: 2.5rem;
+        background-image: url('../img/Manta Logo 1/MANTA Lime green A1 RGB R.png');
+        background-size: 10%;
+        background-repeat: repeat-x;
+      }
+      
+      .list-inline {
+        width: 20%;
+        margin-right: 6px;
+      }
+
+      .list-inline span{
+        margin-top:0px;
+      }
+
+      #statement {
+        font-size: 10px;
+        line-height: 1;
+        margin-top: 5px;
+        /* width: 50%; */
+      }
+
+      .logosection {
+        /* width: 50%; */
+        /* margin-right: 5%; */
+      }
+
+      .logosection span{
+        margin-top: 1px;
+      }
+
+      #fb, #ig{
+        margin-right:4px;
+      }
+
+      #vimeo{
+        margin-right:6px;
+      }
+
+      #fb img{
+        margin-left:2px;
+      }
+      
+      #ig img, #vimeo img, #fb img, #linkedin img {
+        width: 160%;
+        margin-top: 2px;
+        margin-left: 0px;
+      }
+      
+      #term {
+        font-size: 0.6rem;
+        margin-top: 2.5%;
+        width: 100%;
+      }
+    
+    
+}
