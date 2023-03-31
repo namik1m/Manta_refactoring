@@ -1,5 +1,4 @@
 class MediaPlayer{
-    
     constructor(_number, imagename, videoId) {
         let number = (""+_number).replace('0','');
         let contents = `
